@@ -5,18 +5,18 @@ const Ken = require('ken32');
 
 app.use(express.static('scr'));
 
-const whitelist = ["https://iosis.kro.kr:3000"];
-corsOptions ={
-    origin: function (origin, callback) {
-        if(whitelist.indexOf(origin) !== -1){
-            callback(null, true);
-        } else{
-            callback(new Error("Not Allowed Origin!"));
-        }
-      }
-};
+// const whitelist = ["https://iosis.kro.kr:3000"];
+// corsOptions ={
+//     origin: function (origin, callback) {
+//         if(whitelist.indexOf(origin) !== -1){
+//             callback(null, true);
+//         } else{
+//             callback(new Error("Not Allowed Origin!"));
+//         }
+//       }
+// };
 
-app.use(cors(corsOptions));
+app.use(cors());
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
