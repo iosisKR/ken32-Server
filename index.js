@@ -17,7 +17,7 @@ app.get('/Encryption/:value/:key', (req, res) => {
     res.send(result);
 })
 
-app.get('/  /:value/:key', (req, res) => {
+app.get('/Decryption/:value/:key', (req, res) => {
     result = Ken.Decryption(req.params?.value, req.params?.key);
     res.send(result);
 })
