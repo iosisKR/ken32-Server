@@ -28,14 +28,14 @@ app.get('/', (req, res) => {
 
 app.get('/Encryption/:value/:key', (req, res) => {
     result = Ken.Encryption(req.params?.value, req.params?.key);
-    res.send(result);
+    res.json({result: result});
 })
 
 app.get('/Decryption/:value/:key', (req, res) => {
     result = Ken.Decryption(req.params?.value, req.params?.key);
-    res.send(result);
+    res.json({result: result});
 })
-
+    
 app.post('/value', (req, res, next) => {
     var result;
 
