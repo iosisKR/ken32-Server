@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/index.css" rel="stylesheet" type="text/css" />
+    <title>Ken32 Encryption</title>
+</head>
+<body>
+    <div id = "value-container">
+        <form action="/value" method="post">
+            <label>값:</label>
+            <input name="value" type="text" autocomplete='off' /> 
+            <input name="button" type="submit" value="암호화" />
+            </br>
+            <label>키:</label>
+            <input name="key" type="number" autocomplete='off' />
+            <input name ="button" type="submit" value="복호화" />
+        </form>
+    </div>
+
+
+    <script src="/js/index.js"></script>
+</body> 
+</html>
