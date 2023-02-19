@@ -27,6 +27,14 @@ app.get('/', (req, res) => {
 })
 
 app.get('/Encryption/:value/:key', (req, res) => {
+    console.log(req.params);
+    if(req.params?.key == 'random'){
+        var random = Math.floor(Math.random() * 100000 + (Math.random() * 100 + 1000));
+        req.params.key = random;
+        result = Ken.Encryption(req.params?.value, req.params?.key);
+        res.json({result: result, key:random});
+        return;
+    }
     result = Ken.Encryption(req.params?.value, req.params?.key);
     res.json({result: result});
 })
