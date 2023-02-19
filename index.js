@@ -21,13 +21,20 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+let saveArray = [];
+
+app.get('/save/Encryption/:value', (req, res) => {
+    req.params.key = Math.floor(Math.random() * 100000 + (Math.random() * 100 + 1000));
+    result = Ken.Encryption(req.params?.value, req.params?.key);
+    res.json({result: result, key:random});
+    return;
+})
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/scr/html/index.html')
 })
 
 app.get('/Encryption/:value/:key', (req, res) => {
-    console.log(req.params);
     if(req.params?.key == 'random'){
         var random = Math.floor(Math.random() * 100000 + (Math.random() * 100 + 1000));
         req.params.key = random;
