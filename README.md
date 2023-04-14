@@ -1,2 +1,2 @@
 # ken32-Server
-9Dollar's encryption/decryption (ken32) used project
+9Dollar's (joke) encryption/decryption (ken32) used project
