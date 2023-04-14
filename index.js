@@ -1,3 +1,4 @@
+//실질적인 암호화/복호화 기능은 열약합니다, 실제 사용은 매우 비추천합니다.
 const express = require('express');
 const app = express();
 const cors = require('cors');
